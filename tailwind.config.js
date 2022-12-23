@@ -18,6 +18,11 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
       '2xl': '1536px',
+      'mobile': { 'min': '280px', 'max': '480px' },
+      'tablet': { 'min': '481px', 'max': '820px' },
+      'airpad': { 'min': '821px', 'max': '1023px' },
+      'laptop': { 'min': '1024px', 'max': '1279px' },
+      'desktop': { 'min': '1280px' }
     },
     aspectRatio: {
       auto: 'auto',
