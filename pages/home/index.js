@@ -27,7 +27,7 @@ function Home(props) {
                     <Image src={require('../../public/icons/down_arrow.png')} height={70} width={70} alt='Down-Arrow' />
                 </div>
             </div>
-            <div id="leftImg" className='absolute left-0 bottom-0 mobile:opacity-50 tablet:opacity-50 airpad:opacity-50
+            <div id="leftImg" className='absolute mobile:-z-1 left-0 bottom-0 mobile:opacity-50 tablet:opacity-0 airpad:opacity-0
             mobile:top-[0px]'>
                 <Image src={require('../../public/icons/green-leafed-girl.png')}
 
