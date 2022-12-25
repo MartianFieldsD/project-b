@@ -9,7 +9,7 @@ function Home(props) {
             <div className='z-10 absolute w-[60px] h-[45px] top-5 left-5 flex justify-center items-center lg:hidden'>
                 <Image className='w-full h-full' src={require('../../public/icons/Logo.png')} alt='Logo' />
             </div>
-            <button className='absolute top-5 right-5 lg:hidden' onClick={() => { setOpenMenu(true) }}>
+            <button className='z-10 absolute top-5 right-5 lg:hidden' onClick={() => { setOpenMenu(true) }}>
                 <Image src={require('../../public/icons/ham-menu.png')} height={25} width={40} alt='ham-menu' />
             </button>
             {openMenu && <Modal onCloseClick={setOpenMenu} />}
