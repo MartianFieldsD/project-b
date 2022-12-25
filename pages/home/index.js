@@ -5,7 +5,7 @@ import { Modal } from '../../src/components/modal';
 function Home(props) {
     const [openMenu, setOpenMenu] = useState(false);
     return (
-        <div className={`relative w-screen h-screen flex flex-col sm:pt-0 sm:justify-center items-center bg-borabayLightBrown overflow-y-hidden`} id='home' >
+        <div className={`relative z-10 w-screen h-screen flex flex-col sm:pt-0 sm:justify-center items-center bg-borabayLightBrown overflow-y-hidden`} id='home' >
             <div className='absolute w-[60px] h-[45px] top-5 left-5 flex justify-center items-center lg:hidden'>
                 <Image className='w-full h-full' src={require('../../public/icons/Logo.png')} alt='Logo' />
             </div>
