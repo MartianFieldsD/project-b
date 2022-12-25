@@ -6,18 +6,24 @@ function Home(props) {
     const [openMenu, setOpenMenu] = useState(false);
     return (
         <div className={`relative w-screen h-screen flex flex-col justify-center items-center bg-borabayLightBrown`} id='home' >
-            <div className='z-10 absolute w-[60px] h-[45px] top-5 left-5 flex justify-center items-center lg:hidden'>
+            <div className='z-10 absolute w-[60px] h-[45px] top-5 left-5 hidden sm:flex justify-center items-center lg:hidden'>
                 <Image className='w-full h-full' src={require('../../public/icons/Logo.png')} alt='Logo' />
             </div>
-            <button className='z-10 absolute top-5 right-5 lg:hidden' onClick={() => { setOpenMenu(true) }}>
+            <div className='z-10 absolute w-[60px] h-[45px] top-5 left-5 flex justify-center items-center sm:hidden'>
+                <Image className='w-full h-full' src={require('../../public/icons/white-Logo.png')} alt='white-Logo' />
+            </div>
+            <button className='z-10 absolute top-5 right-5 lg:hidden hidden sm:flex' onClick={() => { setOpenMenu(true) }}>
                 <Image src={require('../../public/icons/ham-menu.png')} height={25} width={40} alt='ham-menu' />
+            </button>
+            <button className='z-10 absolute top-5 right-5 sm:hidden' onClick={() => { setOpenMenu(true) }}>
+                <Image src={require('../../public/icons/white-ham-menu.png')} height={25} width={40} alt='white-ham-menu' />
             </button>
             {openMenu && <Modal onCloseClick={setOpenMenu} />}
             <div className='z-10 w-[70%] sm:w-[400px] flex flex-col sm:mr-[8%] lg:mr-0 justify-center sm:self-end lg:self-center items-center gap-2'>
-                <span className={`text-borabayDarkBrown font-normal text-lg sm:text-xl text-center font-montserrat`}>Experience Beauty In-Depth  at</span>
-                <span className={`text-borabayBrown font-normal text-3xl sm:text-7xl font-higuen`}>Borabay</span>
-                <span className={`text-borabayBrown text-lg sm:text-xl sm:tracking-[.60em] font-hindguntur`}>THE SALON</span>
-                <span className={`text-borabayDarkBrown font-normal text-lg sm:text-xl text-center font-montserrat`}>Where nature and science interact to concept encompassing beauty solutions</span>
+                <span className={`text-slate-100 sm:text-borabayDarkBrown font-normal text-lg sm:text-xl text-center font-montserrat`}>Experience Beauty In-Depth  at</span>
+                <span className={`text-white sm:text-borabayBrown font-normal text-3xl sm:text-7xl font-higuen`}>Borabay</span>
+                <span className={`text-white sm:text-borabayBrown text-lg sm:text-xl sm:tracking-[.60em] font-hindguntur`}>THE SALON</span>
+                <span className={`text-slate-100 sm:text-borabayDarkBrown font-normal text-lg sm:text-xl text-center font-montserrat`}>Where nature and science interact to concept encompassing beauty solutions</span>
                 <div className='pt-[100px] hidden lg:flex flex-col items-center justify-center gap-2'>
                     <span className={`text-borabayBrown font-normal text-xl font-montserrat`}>Scroll</span>
                     <Image src={require('../../public/icons/down_arrow.png')} height={70} width={70} alt='Down-Arrow' />
